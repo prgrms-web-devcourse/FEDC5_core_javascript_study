@@ -94,10 +94,10 @@ console.log(bindFunc.name); // 출력: bound func
 // call 메서드 이용
 var obj = {
   outer: function () {
-    console.log(this); // outer
+    console.log(this); // obj
 
     var innerFunc = function () {
-      console.log(this); // outer
+      console.log(this); // obj
     };
 
     innerFunc.call(this); // 할당된 함수를 실행
@@ -110,10 +110,10 @@ obj.outer();
 // bind 메서드 이용
 var obj = {
   outer: function () {
-    console.log(this); // outer
+    console.log(this); // obj
 
     var innerFunc = function () {
-      console.log(this); // outer
+      console.log(this); // obj
     }.bind(this);
 
     innerFunc(); // 반환 받은 함수를 실행
